@@ -5,6 +5,8 @@ export interface IMedicine extends Document {
   manufacturer: string;
   price: number;
   stock: number;
+  totalReviews?: number;
+  averageRating?: number;
   category: string;
   imageURL: string;
   description?: string;

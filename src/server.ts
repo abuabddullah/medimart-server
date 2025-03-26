@@ -14,6 +14,7 @@ import { prescriptionRoutes } from "./modules/prescription/prescription.routes";
 import { userRoutes } from "./modules/user/user.routes";
 import { reviewRoutes } from "./modules/reivew/review.routes";
 import { newsletterRoutes } from "./modules/newsletter/newsletter.router";
+import { medicineReviewRoutes } from "./modules/medicineReview/medicineReview.routes";
 
 const app = express();
 const port = config.PORT || 5000;
@@ -32,6 +33,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/prescriptions", prescriptionRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/reviews", reviewRoutes);
+app.use("/api/medicineReviews", medicineReviewRoutes);
 app.use("/api/newsletter", newsletterRoutes);
 
 // Default route

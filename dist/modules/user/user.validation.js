@@ -8,6 +8,7 @@ exports.registerSchema = zod_1.z.object({
         email: zod_1.z.string().email(),
         password: zod_1.z.string().min(6),
         phone: zod_1.z.string().optional(),
+        avatar: zod_1.z.string().optional(),
         address: zod_1.z
             .object({
             street: zod_1.z.string().optional(),
@@ -31,6 +32,7 @@ exports.updateProfileSchema = zod_1.z.object({
         name: zod_1.z.string().min(2).max(50).optional(),
         email: zod_1.z.string().email().optional(),
         phone: zod_1.z.string().optional(),
+        avatar: zod_1.z.string().optional(),
         address: zod_1.z
             .object({
             street: zod_1.z.string().optional(),

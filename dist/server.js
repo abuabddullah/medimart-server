@@ -17,6 +17,7 @@ const prescription_routes_1 = require("./modules/prescription/prescription.route
 const user_routes_1 = require("./modules/user/user.routes");
 const review_routes_1 = require("./modules/reivew/review.routes");
 const newsletter_router_1 = require("./modules/newsletter/newsletter.router");
+const medicineReview_routes_1 = require("./modules/medicineReview/medicineReview.routes");
 const app = (0, express_1.default)();
 const port = config_1.default.PORT || 5000;
 // Middleware
@@ -32,6 +33,7 @@ app.use("/api/orders", order_routes_1.orderRoutes);
 app.use("/api/prescriptions", prescription_routes_1.prescriptionRoutes);
 app.use("/api/payments", payment_routes_1.paymentRoutes);
 app.use("/api/reviews", review_routes_1.reviewRoutes);
+app.use("/api/medicineReviews", medicineReview_routes_1.medicineReviewRoutes);
 app.use("/api/newsletter", newsletter_router_1.newsletterRoutes);
 // Default route
 app.get("/", (req, res) => {

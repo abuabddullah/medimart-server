@@ -23,6 +23,14 @@ const medicineSchema = new mongoose.Schema(
       required: true,
       min: 0,
     },
+    totalReviews: {
+      type: Number,
+      required: false,
+    },
+    averageRating: {
+      type: Number,
+      required: false,
+    },
     category: {
       type: String,
       required: true,
